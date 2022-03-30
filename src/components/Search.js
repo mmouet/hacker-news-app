@@ -6,17 +6,16 @@ class Search extends React.Component {
     componentDidMount() {
         this.props.fetchSearch();
     }
-
-    renderSearch() {
-        console.log(this.props.search.data.articles)
-        
-        // This throws the error.
-        // console.log(this.props.search.data.articles[0])
-
-        return (
-            <div>
-            </div>
-        )
+        // author, content, description, publishedAt, title, url, urlToImage, source.id, source.name
+    renderSearch() {      
+        // console.log(this.props?.search?.data?.articles)
+        // return this.props?.search?.data?.articles && this.props?.search?.data?.articles.map((article, index) => {
+        //     return (
+        //         <div>
+        //             {article.title}
+        //         </div>
+        //     )
+        // })
     }
 
     render() {
