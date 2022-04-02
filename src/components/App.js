@@ -1,14 +1,17 @@
 import React from 'react';
-import News from './News';
-import Search from './Search';
+import SearchBar from './SearchBar';
+import NewsResults from './NewsResults';
+import useSearch from '../hooks/useSearch';
 
 const App = () => {
+    const [results, searchResults] = useSearch('buildings')
+
     return (
-    <div>
-        <Search />
-        <News />
-    </div>
+        <div> 
+            <SearchBar onFormSubmit={searchResults} />
+            <NewsResults results={results} />
+        </div>
     )
-};
+}
 
 export default App;
