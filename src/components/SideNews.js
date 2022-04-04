@@ -11,7 +11,7 @@ const SideNews = () => {
     const getSideResults = async () => {
         const response = await newsapi.get('/top-headlines', {
             params: {
-                category: 'science'
+                category: 'technology'
             }
         });
         setSideResults(response.data.articles)
@@ -27,7 +27,7 @@ const SideNews = () => {
 
                 <div>
                     <div className="ui image large">
-                        <a href={result.url}>
+                        <a href={result.url} target="_blank" rel="noopener noreferrer">
                             <img src={result.urlToImage} />
                         </a>
                     </div>   

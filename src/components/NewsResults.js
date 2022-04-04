@@ -10,7 +10,7 @@ const NewsResults = ({ results }) => {
                 </div>
                 
                 <div>
-                    <a href={result.url}>
+                    <a href={result.url} target="_blank" rel="noopener noreferrer">
                         <img src={result.urlToImage} className="ui centered large image"/>
                     </a>
                 </div>   
