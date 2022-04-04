@@ -12,11 +12,13 @@ const SearchBar = ({ onFormSubmit }) => {
         <div>
             <form onSubmit={onSubmit}>
                 <label>Search: </label>
-                <input 
-                    type="text"
-                    value={term}
-                    onChange={(event) => setTerm(event.target.value)}
-                />
+                <div className="ui input">
+                    <input 
+                        type="text"
+                        value={term}
+                        onChange={(event) => setTerm(event.target.value)}
+                    />
+                </div>
             </form>
         </div>
     );
