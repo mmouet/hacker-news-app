@@ -19,16 +19,16 @@ const SideNews = () => {
 
     const renderNews = sideResults.map((result) => {
         return (
-            <div key={result.source.id} className="ui card">
+            <div key={result.source.id} className="container">
                 <div>
-                    <h2>{result.title}</h2>
-                    <h5>by {result.author} - {result.source.name} - {result.publishedAt}</h5>
+                    <h2 className="text-center">{result.title}</h2>
+                    <h6 className="text-center">by {result.author} - {result.source.name} - {result.publishedAt}</h6>
                 </div>
 
                 <div>
-                    <div className="ui image large">
+                    <div className="">
                         <a href={result.url} target="_blank" rel="noopener noreferrer">
-                            <img src={result.urlToImage} />
+                            <img src={result.urlToImage} className="img-fluid" />
                         </a>
                     </div>   
                 </div>

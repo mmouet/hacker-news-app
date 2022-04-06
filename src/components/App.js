@@ -8,27 +8,27 @@ const App = () => {
     const [results, searchResults] = useSearch('buildings')
 
     return (
-        <div className="ui eight column grid"> 
-            <div className="row">
-                <div className="one wide column"></div>
-                <div className="ten wide column">
-                    <h1>Hacker News App - Module 5</h1>
-                </div>
-                <div className="three wide column">
-                    <br></br>
-                    <SearchBar onFormSubmit={searchResults} />
-                </div>
+        <div className="container"> 
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-9">
+                        <h1 className="display-4 text-start text-decoration-underline" >Hacker News App - Module 5</h1>
+                    </div>
+                    <div className="col-sm-3">
+                        <br></br>
+                        <SearchBar onFormSubmit={searchResults} />
+                    </div>
+                </div> 
             </div>
-
+            <br></br>
             <div className="row">
-            <div className="one wide column"></div>
-                <div className="ten wide column">
+                <div className="col-sm-8">
                     <NewsResults results={results} />
                 </div>
-                <div className="four wide column">
+                <div className="col-sm-4">
+                    <h2 className="display-6 text-center text-decoration-underline">Other Popular News</h2>
                     <SideNews />
                 </div>
-                <div className="one wide column"></div>
             </div>
         </div>
     )

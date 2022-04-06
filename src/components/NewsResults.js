@@ -3,22 +3,22 @@ import React from 'react';
 const NewsResults = ({ results }) => {
     const renderNews = results.map((result) => {
         return (
-            <div key={result.title} className="large middle aligned" >
-                <div style={{ textAlign: 'center' }}>
-                    <h2>{result.title}</h2>
-                    <h4>by {result.author} - {result.source.name} - {result.publishedAt}</h4>
+            <div key={result.title} className="container-sm" >
+                <div>
+                    <h2 className="text-center">{result.title}</h2>
+                    <h6 className="text-center">by {result.author} - {result.source.name} - {result.publishedAt}</h6>
                 </div>
                 
                 <div>
                     <a href={result.url} target="_blank" rel="noopener noreferrer">
-                        <img src={result.urlToImage} className="ui centered large image"/>
+                        <img src={result.urlToImage} className="img-fluid"/>
                     </a>
                 </div>   
 
-                <div className="ui grid" style={{ textAlign: 'center' }}>
-                    <div className="three wide column"></div>
-                    <p className="ten wide column">{result.description} {result.content}</p>
-                    <div className="two wide column"></div>
+                <div>
+                    <div></div>
+                    <p>{result.description} {result.content}</p>
+                    <div></div>
                 </div>
                 <br></br>
                 <br></br>
